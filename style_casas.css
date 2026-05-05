@@ -164,6 +164,10 @@ article:hover {
     width: 80%;
 }
 
+.formulario input[type="checkbox"] {
+    width: 5%;
+}
+
 .formulario input:focus {
     border-color: #844;
     outline: none;
@@ -175,6 +179,19 @@ article:hover {
     font-size: 1.1rem;
 }
 
+.contenedor-dispositivos {
+    border: 1px solid lightslategray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+}
+
+.contenedor-dispositivos > li {
+    
+}
 /* Footer */
 footer {
     text-align: left;
