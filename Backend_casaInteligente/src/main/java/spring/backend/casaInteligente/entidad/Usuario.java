@@ -22,6 +22,7 @@ public class Usuario {
     @NotNull(message="El nombre es obligatorio")
     private String nombre;
 
+    @Column(unique = true)
     @Email(message="Formato de email incorrecto")
     private String email;
 
