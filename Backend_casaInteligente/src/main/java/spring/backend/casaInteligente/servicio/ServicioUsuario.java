@@ -7,11 +7,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import spring.backend.casaInteligente.entidad.Usuario;
 import spring.backend.casaInteligente.repositorio.RepoUsuario;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service
 public class ServicioUsuario {
     @Autowired
     private RepoUsuario repoUsuario;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public Usuario getUsuarioLogueado(Authentication authentication) {
         return repoUsuario.findByEmail(authentication.getName())
@@ -30,6 +33,8 @@ public class ServicioUsuario {
         if (usuarioNuevo.getRol() == null) {
             usuarioNuevo.setRol(Usuario.Rol.USER);
         }
+
+        usuarioNuevo.setContraseña(passwordEncoder.encode(usuarioNuevo.getContraseña()));
 
         return repoUsuario.save(usuarioNuevo);
     }
