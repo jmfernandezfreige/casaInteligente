@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import spring.backend.casaInteligente.entidad.Dispositivo;
+import spring.backend.casaInteligente.servicio.ServicioDispositivo;
 
 @RestController
 @RequestMapping("/api/{idEstancia}/dispositivos")
@@ -24,7 +25,7 @@ public class DispositivoControlador {
         return servicioDispositivo.getDispositivo(idDispositivo);
     }
 
-    @PatchMapping("/{idDispositivo}")
+    @PutMapping("/{idDispositivo}")
     public Dispositivo modificaDispositivo(@PathVariable Long idDispositivo, @Valid @RequestBody Dispositivo dispositivoModificado) {
         return servicioDispositivo.modificaDispositivo(idDispositivo, dispositivoModificado);
     }

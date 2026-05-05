@@ -12,4 +12,6 @@ public interface RepoEstancia extends CrudRepository<Estancia,Long> {
     List<Estancia> findAll();
     List<Estancia> findByPlanta(Integer planta);
     Integer countByVivienda(Vivienda vivienda);
+
+    Long id(Long id);
 }

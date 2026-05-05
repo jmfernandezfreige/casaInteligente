@@ -23,6 +23,7 @@ public class Usuario {
     private String nombre;
 
     @Column(unique = true)
+    @NotNull(message = "El email es obligatorio")
     @Email(message="Formato de email incorrecto")
     private String email;
 
@@ -36,7 +37,6 @@ public class Usuario {
     private List<Vivienda> viviendas;
 
     @Column(name="role")
-    @NotNull(message="El Rol no puede ser nulo")
     @Enumerated(EnumType.STRING)
     private Rol rol;
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface RepoDispositivo extends CrudRepository<Dispositivo,Long> {
-    Lis<Dispositivo> findAll();
+    List<Dispositivo> findAll();
     List<Dispositivo> findByEncendido(Boolean encendido);
     List<Dispositivo> findByTipo(Dispositivo.Tipo tipo);
     Integer countByEstancia(Estancia estancia);

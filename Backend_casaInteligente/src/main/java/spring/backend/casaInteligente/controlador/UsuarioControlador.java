@@ -7,6 +7,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import spring.backend.casaInteligente.entidad.Usuario;
+import spring.backend.casaInteligente.servicio.ServicioUsuario;
+
 
 @RestController
 @RequestMapping("/api")
@@ -23,7 +25,7 @@ public class UsuarioControlador {
 
     @GetMapping("/auth/me")
     public Usuario getAutenticacion(Authentication authentication) {
-        return servicioUsuario.getUsuariLogueado(authentication);
+        return servicioUsuario.getUsuarioLogueado(authentication);
     }
 
     @GetMapping("/usuarios/{idUsuario}")
@@ -32,9 +34,9 @@ public class UsuarioControlador {
         return servicioUsuario.getUsuario(idUsuario);
     }
 
-    @PatchMapping("/usuarios/me")
-    public Usuario modificaUsuario(@Valid @RequestBody Usuario usuarioModificado) {
-        return servicioUsuario.modificaUsuario(usuarioModificado);
+    @PutMapping("/usuarios/me")
+    public Usuario modificaUsuario(Authentication authentication, @Valid @RequestBody Usuario usuarioModificado) {
+        return servicioUsuario.modificaUsuario(authentication, usuarioModificado);
     }
 
     @DeleteMapping("usuarios/me")
