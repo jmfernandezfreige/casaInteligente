@@ -153,18 +153,18 @@ article:hover {
     gap: 10px;
 }
 
-.formulario input[type="text"],
-.formulario input[type="password"],
-.formulario input[type="email"] {
+.formulario input {
     width: 90%;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10px;
 }
 
-.formulario input[type="text"]:focus,
-.formulario input[type="password"]:focus,
-.formulario input[type="email"]:focus {
+.formulario input[type="number"] {
+    width: 80%;
+}
+
+.formulario input:focus {
     border-color: #844;
     outline: none;
     box-shadow: 0 0 5px #844;
