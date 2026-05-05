@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="vieport" content="width=device-width initial-scale=1">
+    <title>Estancias de la vivienda</title>
+    <link rel="stylesheet" href="style_casas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de casas inteligentes</h1>
+        <nav class="navegacion">
+            <ul>
+                <li><a href=index.html>Inicio</a></li>
+                <li><a href="viviendas.html">Dipositivos
+                        <ul class="submenu">
+                            <li><a href="#">Dispositivo 1</a></li>
+                            <li><a href="#">Dispositivo 2</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li id="menu-usuario" class="sesion-nav"><a href="usuario-detalle.html">Mi Perfil</a>
+                    <ul class="submenu">
+                        <li><a href="usuario-detalle.html">Detalles usuario</a></li>
+                        <li><a href="index.html">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="servicio" id="servicio">
+        <h2>Gestione sus estancias</h2>
+        <p>Seleccione la estancia que quiere modificar o añada una nueva.</p>
+        <a class="boton boton-1" href="estancia-form.html">Añadir estancia</a>
+
+        <h3>Datos de la vivienda</h3>
+        <div class="datos-vivienda" <ul>
+            <ul>
+                <li>Nombre:</li>
+                <li>Ubicación:</li>
+                <li>Número de plantas:</li>
+                <li>Propietario:</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="estancias" id="estancias">
+        <article class="#">
+            <h2>Estancia 1</h2>
+            <span>Número de dispositivos: </span>
+            <div class="acciones">
+                <a href="dispositivos.html?id=${estancia.idEstancia}" class="boton boton-1">Detalle</a>
+                <button onclick="borrarEstancia(${estancia.idEstancia})" class="boton boton-2">Eliminar</button>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <p><a href="index.html">Inicio</a></p>
+        <p>Contacto: +34 612 34 56 78</p>
+        <p>&copy; José Manuel Fernández Freige</p>
+    </footer>
+</body>
+
+</html>

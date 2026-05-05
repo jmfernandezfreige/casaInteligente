@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" , href="style_casas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de casas inteligentes</h1>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="servicio" id="servicio">
+        <h2>Inicio de sesión en su cuenta</h2>
+        <p>Introduzca sus credenciales para acceder a sus viviendas</p>
+
+        <h3>¿No tiene cuenta?</h3>
+        <a class="boton boton-1" href="registro.html">Registrarse</a>
+
+        <form class="formulario login" id="form-login">
+            <fieldset>
+                <legend>Datos de usuario</legend>
+                <label>Correo electrónico</label>
+                <input type="email" required name="email" placeholder="hola@gmail.com">
+
+                <label>Contraseña</label>
+                <div class="contenedor-password">
+                    <input type="password" required name="contraseña" id="input-contraseña">
+                    <button class="boton boton-3" id="ver-contraseña">Ver</button>
+                </div>
+            </fieldset>
+            <button type="submit" class="boton boton-1">Acceder</button>
+        </form>
+    </section>
+
+    <footer>
+        <p><a href="index.html">Inicio</a></p>
+        <p>Contacto: +34 612 34 56 78</p>
+        <p>&copy; José Manuel Fernández Freige</p>
+    </footer>
+</body>
+
+</html>

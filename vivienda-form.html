@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nueva vivienda</title>
+    <link rel="stylesheet" , href="style_casas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de casas inteligentes</h1>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="viviendas.html">Viviendas</a>
+                    <ul class="submenu">
+                        <li><a href="#">Vivienda 1</a></li>
+                        <li><a href="#">Vivienda 2</a></li>
+                    </ul>
+                </li>
+                <li id="menu-usuario" class="sesion-nav"><a href="usuario-detalle.html">Mi Perfil</a>
+                    <ul class="submenu">
+                        <li><a href="usuario-detalle.html">Detalles usuario</a></li>
+                        <li><a href="index.html">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="servicio" id="servicio">
+        <h2>Cree una nueva vivienda</h2>
+        <p>Introduzca los datos de la nueva vivienda</p>
+
+        <form class="formulario vivienda" id="form-vivienda">
+            <fieldset>
+                <legend>Datos de la vivienda</legend>
+                <label>Nombre</label>
+                <input type="text" required name="nombre" placeholder="Casa en la playa">
+
+                <label>Ubicación</label>
+                <input type="text" required name="ubicacion" placeholder="Madrid, Chamartín">
+
+                <label>Número de plantas</label>
+                <div class="contenedor-planta">
+                    <input type="number" required name="plantas">
+                    <button class="boton boton-3" id="sumar">+</button>
+                    <button class="boton boton-3" id="restar">-</button>
+                </div>
+
+            </fieldset>
+            <button type="submit" class="boton boton-1">Crear</button>
+            <a href="viviendas.html" class="boton boton-2">Cancelar</a>
+        </form>
+    </section>
+
+    <footer>
+        <p><a href="index.html">Inicio</a></p>
+        <p>Contacto: +34 612 34 56 78</p>
+        <p>&copy; José Manuel Fernández Freige</p>
+    </footer>
+</body>
+
+</html>

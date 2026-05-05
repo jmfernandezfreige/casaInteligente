@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viviendas</title>
+    <link rel="stylesheet" , href="style_casas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de casas inteligentes</h1>
+        <nav class="navegacion">
+            <ul>
+                <li><a href=index.html>Inicio</a></li>
+                <li><a href="estancias.html">Estancias
+                        <ul class="submenu">
+                            <li><a href="#">Estancia 1</a></li>
+                            <li><a href="#">Estancia 2</a></li>
+                        </ul>
+                    </a>
+                </li>
+                <li id="menu-usuario" class="sesion-nav"><a href="usuario-detalle.html">Mi Perfil</a>
+                    <ul class="submenu">
+                        <li><a href="usuario-detalle.html">Detalles usuario</a></li>
+                        <li><a href="index.html">Cerrar sesión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="servicio" id="servicio">
+        <h2>Gestione sus viviendas</h2>
+        <p>Seleccione la vivienda que quiere modificar o añada una nueva.</p>
+        <button class="boton boton-1" href="vivienda-form.html">Añadir vivienda</a>
+    </section>
+
+    <section class="viviendas" id="viviendas">
+        <article class="#">
+            <h2>Vivienda 1</h2>
+            <span>Número de estancias: </span>
+            <div class="acciones">
+                <a href="estancias.html?id=${vivienda.idVivienda}" class="boton boton-1">Detalle</a>
+                <button onclick="borrarVivienda(${vivienda.idVivienda})" class="boton boton-2">Eliminar</button>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <p><a href="index.html">Inicio</a></p>
+        <p>Contacto: +34 612 34 56 78</p>
+        <p>&copy; José Manuel Fernández Freige</p>
+    </footer>
+</body>
+
+</html>
