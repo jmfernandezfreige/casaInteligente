@@ -189,8 +189,9 @@ article:hover {
     gap: 4px; 
 }
 
-.contenedor-dispositivos > li {
-    
+.aviso-form {
+    color: darkred;
+    font-weight: bold;
 }
 /* Footer */
 footer {
